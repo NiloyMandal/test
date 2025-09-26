@@ -7,7 +7,7 @@ jobs:
   prime_cache:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: prime-cache-3e69df6
         uses: actions/checkout@v4
 
       - name: prime-cache-3e69df6
