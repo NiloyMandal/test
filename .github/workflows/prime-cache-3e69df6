@@ -17,6 +17,6 @@ jobs:
           path: ~/.cache # Change to the path you want to cache (e.g., node_modules, ~/.cache, etc.)
           key: cache-3e69df6
 
-      - name: Echo cache hit/miss
+      - name: prime-cache-3e69df6
         run: |
           echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
