@@ -1,0 +1,24 @@
+name: Cache Prime CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        id: cache-step
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/demo-deps
+          key: cache-3e69df6
+
+      - name: prime-cache-3e69df6
+        run: echo "Cache hit result: ${{ steps.cache-step.outputs.cache-hit }}"
