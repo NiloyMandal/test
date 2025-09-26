@@ -1,4 +1,4 @@
-name: Cache Prime CI
+name: prime-cache-3e69df6
 
 on:
   workflow_dispatch:
