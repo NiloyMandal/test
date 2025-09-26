@@ -7,16 +7,16 @@ jobs:
   prime_cache:
     runs-on: ubuntu-latest
     steps:
-      - name: prime-cache-3e69df6
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: prime-cache-3e69df6
+      - name: Cache dependencies (prime-cache-3e69df6)
         id: cache-step
         uses: actions/cache@v4
         with:
-          path: ~/.cache # Change to the path you want to cache (e.g., node_modules, ~/.cache, etc.)
+          path: ~/.cache
           key: cache-3e69df6
 
-      - name: prime-cache-3e69df6
+      - name: Echo cache hit/miss (prime-cache-3e69df6)
         run: |
           echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
