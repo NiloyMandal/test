@@ -1,24 +1,22 @@
-name: prime-cache-3e69df6
+name: Cache Prime Example
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
-  build:
+  prime_cache:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Cache dependencies
+      - name: prime-cache-3e69df6
         id: cache-step
         uses: actions/cache@v4
         with:
-          path: ~/.cache/demo-deps
+          path: ~/.cache # Change to the path you want to cache (e.g., node_modules, ~/.cache, etc.)
           key: cache-3e69df6
 
-      - name: prime-cache-3e69df6
-        run: echo "Cache hit result: ${{ steps.cache-step.outputs.cache-hit }}"
+      - name: Echo cache hit/miss
+        run: |
+          echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
