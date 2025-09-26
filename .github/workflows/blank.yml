@@ -1,3 +1,8 @@
+name: Email Step Test
+
+on:
+  workflow_dispatch:
+
 jobs:
   test:
     steps:
